@@ -6,7 +6,7 @@ queue()
 //adds an individual colour to each manufacturer
 var mfrColors = d3.scale.ordinal()
     .domain(["A", "G", "K", "N", "P", "Q", "R"])
-    .range(["#003f5c", "#374c80", "#7a5195", "#bc5090", "#ef5675", "#ff764a", "#ffa600"])
+    .range(["#DF013A", "#0489B1", "#FF4000", "#8A0829", "#088A85", "#58FAAC", "#F4FA58"])
 
 function makeGraphs(error, cerealData) {
     var ndx = crossfilter(cerealData);
