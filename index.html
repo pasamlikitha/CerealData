@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Breakfast Cereal Data Dashboard</title>
+
+    <!--CSS-->
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" type="text/css" />
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+    <!--CSS file for loading the graphs-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/dc/3.0.9/dc.min.css" type="text/css" />
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="static/css/style.css" type="text/css" />
+</head>
+
+<body>
+   
+    <main>
+        <section class="section borderBottom" id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 offset-sm-4 offset-md-4 col-md-4 offset-lg-4 col-lg-4">
+                        <button type="button" class="btn" id="resetButton">Reset All Charts</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 offset-md-1 col-md-10 offset-lg-0 col-lg-6 pieChart chart" id="productsPerManufacturer">
+                        <h2>Cereal Manufacturers</h2>
+                        <p>As can be seen in the pie chart above, Kellogg's and General Mills are the largest cereal manufacturers</p>
+                    </div>
+                   
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 offset-md-1 col-md-10 offset-lg-0 col-lg-6 chart" id="calorieContent">
+                        <h2>Calories per Manufacturer</h2>
+                        <p>The bar chart below indicates that Ralston Purina's products have the most calories, averaging at about 115 calories per product.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--section containing row charts showing nutritional breakdown of products-->
+        
+        <!--end of nutrition breakdown section-->
+        <!--scatter plot showing serving size/calorie correlation and reset button for all charts-->
+        <section class="section" id="serving">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 offset-md-1 col-md-10 offset-lg-3 col-lg-6 chart" id="servingSizeCalorieCorrelation">
+                        <h2 class="scatterPlotHeader" id="servingSize">Serving Size to Calorie Correlation</h2>
+                        <p>As can be seen below, there is very little correlation between serving size and calorie content</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!--JavaScript Files-->
+    <!--jQuery-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <!--Bootstrap JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!--JS libraries for charts-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crossfilter/1.3.12/crossfilter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dc/2.1.8/dc.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/queue-async/1.0.7/queue.min.js"></script>
+    <!--Custom JS file for charts-->
+    <script src="static/scripts/charts.js"></script>
+    <script src="static/scripts/nav.js"></script>
+</body>
+
+</html>

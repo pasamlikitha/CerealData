@@ -1,0 +1,235 @@
+/*********import code for google fonts*/
+
+@import url('https://fonts.googleapis.com/css?family=Oswald: 100, 200, 300, 400, 500, 600, 700, 800');
+body {
+    overflow-x: hidden;
+    margin: 0 auto;
+}
+
+header {
+    max-width: 100vw;
+}
+
+/****************************headings*/
+
+h1 {
+    display: inline;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+}
+
+h2 {
+    color: #374c80;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    font-weight: 900;
+    margin-bottom: 1em;
+    text-align: center;
+}
+
+h3 {
+    color: #ffa600;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5em;
+    font-weight: 800;
+    text-align: center;
+}
+
+/***************************Navbar Styles*/
+
+.navbar {
+    background-color: #2f4b7c;
+}
+
+.navbar-brand img {
+    display: none;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    background: #ffffff;
+    color: #2f4b7c;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/************Styles for Mid sections*/
+
+.border-bottom {
+    border-bottom: 3px solid #003f5c;
+    width: 100%;
+}
+
+/****************Paragraphs for Chart Descriptions*/
+
+p {
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+    margin-top: 20px;
+    text-align: center;
+}
+
+/**************Styles for the reset charts button*/
+
+.btn,
+.btn:active,
+.btn:active:focus,
+.btn:focus,
+.btn:hover,
+.btn:visited {
+    background-color: #bc5090;
+    border: 1px solid #bc5090;
+    box-shadow: none;
+    color: #ffffff;
+    font-size: 1em;
+    font-weight: 800;
+    margin: 0 auto;
+    outline: none;
+    width: 100%;
+}
+
+/**********************Font Awesome Icons*/
+
+.icon {
+    font-size: 3em;
+    color: #ffffff;
+    margin-left: 1em;
+    text-align: center;
+}
+
+/******************************Chart Containers*/
+
+.container {
+    padding-top: 90px;
+    margin: 0 auto;
+}
+
+.row {
+    padding: 1em;
+}
+
+.section {
+    margin: 0 auto;
+    padding: 5px;
+    width: 100%;
+}
+/***************Styles for Select Menu*/
+
+.dc-select-menu {
+    display: inline-block;
+    width: 80%;
+    margin: 0 10%;
+}
+
+/******************************Charts*/
+
+.chart {
+    width: 100%;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.pieChart {
+    margin-bottom: 40px;
+}
+
+#productsPerManufacturer {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+/*Removes the tick marks from the x-axis of the barChart*/
+
+#calorieContent .x.axis .tick line {
+    display: none;
+}
+
+/*rotates labels on as bars on barChart as they were not readbale in the defualt state*/
+
+#calorieContent .x.axis text {
+    fill: #ffffff;
+    font-size: .8em;
+    font-weight: 800;
+    text-anchor: end !important;
+    -webkit-transform: rotate(90deg) translate(-20px, -15px);
+    -moz-transform: rotate(90deg) translate(-20px, -15px);
+    -ms-transform: rotate(90deg) translate(-20px, -15px);
+    -o-transform: rotate(90deg) translate(-20px, -15px);
+    transform: rotate(90deg) translate(-20px, -15px);
+}
+
+/*********************Scatter Plot Styling*/
+
+#servingSizeCalorieCorrelation {
+    width: 100%;
+    margin: 0 auto;
+}
+
+/*****************************************Footer*/
+
+footer {
+    background: #003f5c;
+    height: 100px;
+    max-width: 100vw;
+}
+
+footer a,
+footer a :hover,
+footer a :focus,
+footer a :active,
+footer a :visited {
+    color: #ffffff;
+}
+
+/***************************Media Queries*/
+
+/*****max-width to transform legend on pie chart*/
+
+@media screen and (max-width: 600px) {
+    .dc-legend {
+        -webkit-transform: translate(110px, 130px) scale(0.4);
+        -moz-transform: translate(110px, 130px) scale(0.4);
+        -ms-transform: translate(110px, 130px) scale(0.4);
+        -o-transform: translate(110px, 130px) scale(0.4);
+        transform: translate(110px, 130px) scale(0.4);
+    }
+    .dc-legend-item text {
+        font-size: 24px;
+    }
+}
+
+/******min-width for all other media queries*/
+
+@media screen and (min-width: 768px) {
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+    }
+    .navbar-brand img {
+        display: inline-block;
+    }
+    .section {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    h1,
+    h2,
+    h3 {
+        text-align: center;
+    }
+    .section {
+        width: 90%;
+    }
+    .border-bottom {
+        width: 90%;
+    }
+}
