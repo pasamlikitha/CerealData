@@ -1,6 +1,6 @@
 //code for graphs and pie charts to go here
 queue()
-    .defer(d3.csv, "static/data/cereal.csv")
+    .defer(d3.csv, "cereal.csv")
     .await(makeGraphs);
 
 //adds an individual colour to each manufacturer
